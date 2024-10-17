@@ -19,7 +19,10 @@ export function getSearchClient(newIndex?: any): SearchClient {
   };
 }
 
-export function createIndex(data: object, options: ItemsJsOptions): any {
+export function createIndex(
+  data: Record<any, unknown>[],
+  options: ItemsJsOptions
+) {
   index = itemsjs(data, options);
   return index;
 }
